@@ -17,11 +17,9 @@ export const readFile = (fileName: string): number[][] => {
     const lines = data.split(/\r?\n/).filter((line) => line.trim() !== '');
     const arrayOfNumberArrays = lines.map((line) => {
       return line
-        .replace(/\s+/g, ' ')
-        .trim()
-        .split(' ')
-        .filter((str) => str !== '')
-        .map(Number);
+        .split(/\s+/)
+        .map(Number)
+        .filter((n) => !isNaN(n));
     });
 
     return arrayOfNumberArrays;
