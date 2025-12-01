@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { part1, part2 } from './day-1';
+import { part1, part2 } from './example';
 
 describe('day 1', () => {
   it('Should return x for test data', () => {
